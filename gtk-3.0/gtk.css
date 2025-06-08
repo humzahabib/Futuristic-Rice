@@ -1,0 +1,309 @@
+/* Cyberpunk Thunar Theme - GTK3 */
+
+/* Main window styling */
+.thunar window {
+    background-color: rgba(10, 10, 20, 0.95);
+    color: #00ddff;
+    font-family: 'JetBrainsMono Nerd Font', monospace;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* Toolbar styling */
+.thunar toolbar {
+    background: linear-gradient(135deg, rgba(10, 10, 20, 0.9), rgba(20, 10, 30, 0.9));
+    border-bottom: 2px solid #00ddff;
+    box-shadow: 0 2px 4px rgba(0, 221, 255, 0.3);
+    padding: 2px 2px;
+    min-height: 16px;
+}
+
+.thunar toolbar button {
+    background: rgba(0, 221, 255, 0.1);
+    border: 1px solid #00ddff;
+    border-radius: 4px;
+    color: #00ddff;
+    margin: 1px 2px;
+    padding: 4px 8px;
+    min-height: 16px;
+    transition: all 0.3s ease;
+}
+
+.thunar toolbar button:hover {
+    background: rgba(255, 0, 221, 0.2);
+    border-color: #ff00dd;
+    color: #ff00dd;
+    box-shadow: 0 0 10px rgba(255, 0, 221, 0.4);
+}
+
+.thunar toolbar button:active {
+    background: rgba(255, 0, 221, 0.3);
+}
+
+/* Location bar */
+.thunar .location-bar {
+    background: rgba(0, 221, 255, 0.1);
+    border: 1px solid #00ddff;
+    border-radius: 4px;
+    color: #00ddff;
+    padding: 2px 2px;
+    margin: 2px 2px;
+    min-height: 16px;
+    font-size: 12px;
+}
+
+.thunar .location-bar:focus {
+    border-color: #ff00dd;
+    box-shadow: 0 0 8px rgba(255, 0, 221, 0.5);
+    outline: none;
+}
+
+/* Sidebar */
+.thunar .sidebar {
+    background: rgba(10, 10, 20, 0.8);
+    border-right: 1px solid #00ddff;
+    padding: 8px;
+}
+
+.thunar .sidebar row {
+    border-radius: 6px;
+    margin: 2px 0;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.thunar .sidebar row:hover {
+    background: rgba(0, 255, 221, 0.1);
+    color: #00ffdd;
+}
+
+.thunar .sidebar row:selected {
+    background: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+    box-shadow: inset 3px 0 0 #ff00dd;
+}
+
+/* Main view area */
+.thunar .view {
+    background: rgba(10, 10, 20, 0.9);
+    color: #00ddff;
+    padding: 4px;
+}
+
+/* List view */
+.thunar treeview {
+    background: transparent;
+    color: #00ddff;
+}
+
+.thunar treeview:selected {
+    background: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+}
+
+.thunar treeview row {
+    border-radius: 4px;
+    margin: 1px 0;
+    padding: 4px 8px;
+    transition: all 0.2s ease;
+}
+
+.thunar treeview row:hover {
+    background: rgba(0, 221, 255, 0.1);
+    box-shadow: 0 0 5px rgba(0, 221, 255, 0.3);
+}
+
+.thunar treeview row:selected {
+    background: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+    box-shadow: 0 0 8px rgba(255, 0, 221, 0.4);
+}
+
+/* Icon view */
+.thunar .view {
+    background: transparent;
+    color: #00ddff;
+    padding: 4px;
+}
+
+.thunar .view:selected {
+    background: rgba(255, 0, 221, 0.2);
+    border-radius: 3px;
+    color: #ff00dd;
+}
+
+.thunar .view item {
+    border-radius: 8px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+.thunar .view item:hover {
+    background: rgba(0, 221, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 221, 255, 0.3);
+}
+
+.thunar .view item:selected {
+    background: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+    box-shadow: 0 0 15px rgba(255, 0, 221, 0.4);
+}
+
+/* Statusbar */
+.thunar statusbar {
+    background: linear-gradient(135deg, rgba(10, 10, 20, 0.9), rgba(20, 10, 30, 0.9));
+    border-top: 1px solid #00ddff;
+    color: #00ddff;
+    padding: 6px 12px;
+}
+
+/* Scrollbars */
+.thunar scrollbar {
+    background: rgba(0, 221, 255, 0.1);
+    border-radius: 10px;
+}
+
+.thunar scrollbar slider {
+    background: linear-gradient(135deg, #00ddff, #ff00dd);
+    border-radius: 10px;
+    min-height: 20px;
+    transition: all 0.3s ease;
+}
+
+.thunar scrollbar slider:hover {
+    background: linear-gradient(135deg, #ff00dd, #ffaa00);
+    box-shadow: 0 0 10px rgba(255, 0, 221, 0.5);
+}
+
+/* Menu styling */
+.thunar menu {
+    background: rgba(10, 10, 20, 0.95);
+    border: 1px solid #00ddff;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 221, 255, 0.3);
+    padding: 8px;
+}
+
+.thunar menuitem {
+    border-radius: 6px;
+    color: #00ddff;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.thunar menuitem:hover {
+    background: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+    box-shadow: 0 0 8px rgba(255, 0, 221, 0.4);
+}
+
+/* Dialog boxes */
+.thunar dialog {
+    background: rgba(10, 10, 20, 0.95);
+    border: 2px solid #00ddff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 221, 255, 0.3);
+    color: #00ddff;
+}
+
+.thunar dialog headerbar {
+    background: linear-gradient(135deg, rgba(0, 221, 255, 0.2), rgba(255, 0, 221, 0.2));
+    border-bottom: 1px solid #00ddff;
+    color: #00ddff;
+}
+
+.thunar dialog button {
+    background: rgba(0, 221, 255, 0.1);
+    border: 1px solid #00ddff;
+    border-radius: 6px;
+    color: #00ddff;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+.thunar dialog button:hover {
+    background: rgba(255, 0, 221, 0.2);
+    border-color: #ff00dd;
+    color: #ff00dd;
+    box-shadow: 0 0 10px rgba(255, 0, 221, 0.4);
+}
+
+.thunar dialog button.suggested-action {
+    background: linear-gradient(135deg, #00ff00, #00ddff);
+    color: #0a0a14;
+}
+
+.thunar dialog button.suggested-action:hover {
+    background: linear-gradient(135deg, #00ffdd, #ff00dd);
+    box-shadow: 0 0 15px rgba(0, 255, 221, 0.5);
+}
+
+.thunar dialog button.destructive-action {
+    background: linear-gradient(135deg, #ff0000, #ff5555);
+    color: #f8f8f2;
+}
+
+.thunar dialog button.destructive-action:hover {
+    background: linear-gradient(135deg, #ff5555, #ff00dd);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Progress bars */
+.thunar progressbar {
+    background: rgba(0, 221, 255, 0.1);
+    border-radius: 10px;
+}
+
+.thunar progressbar progress {
+    background: linear-gradient(90deg, #00ddff, #ff00dd, #ffaa00);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Tooltips */
+.thunar tooltip {
+    background: rgba(10, 10, 20, 0.95);
+    border: 1px solid #00ddff;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 221, 255, 0.3);
+    color: #00ddff;
+    padding: 8px 12px;
+}
+
+/* Entry fields */
+.thunar entry {
+    background: rgba(0, 221, 255, 0.1);
+    border: 1px solid #00ddff;
+    border-radius: 6px;
+    color: #00ddff;
+    padding: 2px 2px;
+    transition: all 0.3s ease;
+}
+
+.thunar entry:focus {
+    border-color: #ff00dd;
+    box-shadow: 0 0 10px rgba(255, 0, 221, 0.4);
+    outline: none;
+}
+
+.thunar entry selection {
+    background: rgba(255, 0, 221, 0.3);
+    color: #ff00dd;
+}
+
+/* Separator */
+.thunar separator {
+    background: linear-gradient(90deg, transparent, #ff00dd, transparent);
+    margin: 4px 0;
+}
+
+/* Animation keyframes */
+@keyframes cyber-glow {
+    0% { box-shadow: 0 0 5px rgba(0, 221, 255, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 0, 221, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(0, 221, 255, 0.3); }
+}
+
+.thunar .cyber-pulse {
+    animation: cyber-glow 2s ease-in-out infinite;
+}

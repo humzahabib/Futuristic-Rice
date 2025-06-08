@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Background circle with glow -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="#00ddff" stroke-width="5" opacity="0.8">
+    <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Inner circuit lines -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="#ff00ff" stroke-width="2" opacity="0.7" />
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#00ddff" stroke-width="2" opacity="0.7" />
+  
+  <!-- Lock body -->
+  <rect x="70" y="90" width="60" height="50" rx="10" ry="10" fill="#111122" stroke="#00ddff" stroke-width="2">
+    <animate attributeName="stroke" values="#00ddff;#ff00ff;#00ddff" dur="4s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Lock shackle -->
+  <path d="M85,90 L85,65 C85,50 115,50 115,65 L115,90" fill="none" stroke="#00ddff" stroke-width="3">
+    <animate attributeName="stroke" values="#00ddff;#ff00ff;#00ddff" dur="4s" repeatCount="indefinite" />
+  </path>
+  
+  <!-- Hexagon pattern in background -->
+  <polygon points="100,50 120,65 120,95 100,110 80,95 80,65" fill="none" stroke="#ff00ff" stroke-width="1" opacity="0.5" />
+  <polygon points="100,60 115,70 115,90 100,100 85,90 85,70" fill="none" stroke="#00ddff" stroke-width="1" opacity="0.5" />
+  
+  <!-- Binary code decoration -->
+  <text x="80" y="105" font-family="monospace" font-size="8" fill="#00ddff">10110</text>
+  <text x="80" y="115" font-family="monospace" font-size="8" fill="#00ddff">01101</text>
+  <text x="80" y="125" font-family="monospace" font-size="8" fill="#00ddff">11010</text>
+  
+  <!-- Scanning line effect -->
+  <rect x="70" y="90" width="60" height="2" fill="#ff00ff" opacity="0.7">
+    <animate attributeName="y" values="90;140;90" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="2s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- Outer glow -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="5" result="blur" />
+    <feFlood flood-color="#00ddff" result="glow-color" />
+    <feComposite in="glow-color" in2="blur" operator="in" result="glow-blur" />
+    <feBlend in="SourceGraphic" in2="glow-blur" mode="screen" />
+  </filter>
+  
+  <!-- Glow effect around lock -->
+  <rect x="70" y="90" width="60" height="50" rx="10" ry="10" fill="none" stroke="#00ddff" stroke-width="1" filter="url(#glow)" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3s" repeatCount="indefinite" />
+  </rect>
+</svg>

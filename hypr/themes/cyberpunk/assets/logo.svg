@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Logo background -->
+  <defs>
+    <linearGradient id="logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A16" />
+      <stop offset="100%" stop-color="#1A1A36" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base square with rounded corners -->
+  <rect x="10" y="10" width="180" height="180" rx="20" ry="20" fill="url(#logo-bg)" stroke="#00F6FF" stroke-width="3"/>
+  
+  <!-- Stylized "C" letter -->
+  <path d="M50,50 L50,150 L150,150" fill="none" stroke="#FF00FF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="140" cy="60" r="20" fill="none" stroke="#FFFC00" stroke-width="4"/>
+  <line x1="70" y1="100" x2="130" y2="100" stroke="#00F6FF" stroke-width="4"/>
+</svg>

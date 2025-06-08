@@ -1,0 +1,167 @@
+# Cyberpunk Dunst Configuration
+# Notification daemon styled to match the Waybar theme
+
+[global]
+    ### Display ###
+    monitor = 0
+    follow = mouse
+    
+    # The geometry of the window:
+    # [{width}]x{height}[+/-{x}+/-{y}]
+    geometry = "350x5-15+45"
+    
+    # Show how many messages are currently hidden (because of geometry).
+    indicate_hidden = yes
+    
+    # Shrink window if it's smaller than the width.
+    shrink = no
+    
+    # Window transparency
+    transparency = 15
+    
+    # The height of the entire notification.
+    notification_height = 0
+    
+    # Draw a line of "separator_height" pixel height between two notifications.
+    separator_height = 2
+    
+    # Padding between text and separator.
+    padding = 12
+    
+    # Horizontal padding.
+    horizontal_padding = 12
+    
+    # Frame around the notification window
+    frame_width = 2
+    
+    # Define a color for the separator.
+    separator_color = "#ff00dd"
+    
+    # Sort messages by urgency.
+    sort = yes
+    
+    # Don't remove messages, if the user is idle (no mouse or keyboard input)
+    idle_threshold = 120
+
+    ### Text ###
+    font = JetBrainsMono Nerd Font 10
+    
+    # The spacing between lines.
+    line_height = 4
+    
+    # Allow html markup in notifications
+    markup = full
+    
+    # The format of the message.
+    format = "<b>%s</b>\n%b"
+    
+    # Alignment of message text.
+    alignment = left
+    
+    # Show age of message if message is older than show_age_threshold
+    show_age_threshold = 60
+    
+    # Split notifications into multiple lines
+    word_wrap = yes
+    
+    # Ignore newlines '\n' in notifications.
+    ignore_newline = no
+    
+    # Stack together notifications with the same content
+    stack_duplicates = true
+    
+    # Hide the count of stacked notifications with the same content
+    hide_duplicate_count = false
+    
+    # Display indicators for URLs (U) and actions (A).
+    show_indicators = yes
+
+    ### Icons ###
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 64
+    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
+
+    ### History ###
+    sticky_history = yes
+    history_length = 20
+
+    ### Misc/Advanced ###
+    # Browser for opening urls
+    browser = xdg-open
+    
+    # Always run rule-defined scripts, even if the notification is suppressed
+    always_run_script = true
+    
+    # Define the title of the windows spawned by dunst
+    title = Dunst
+    
+    # Define the class of the windows spawned by dunst
+    class = Dunst
+    
+    # Define the corner radius of the notification window
+    corner_radius = 8
+    
+    # Don't gnore the dbus closeNotification message.
+    ignore_dbusclose = false
+
+    ### Mouse
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#0a0a14"
+    foreground = "#00ddff"
+    frame_color = "#00ddff"
+    timeout = 10
+    # Icon for low urgency notifications
+    new_icon = dialog-information
+
+[urgency_normal]
+    background = "#0a0a14"
+    foreground = "#f8f8f2"
+    frame_color = "#00ddff"
+    timeout = 10
+    # Icon for normal urgency notifications
+    new_icon = dialog-information
+
+[urgency_critical]
+    background = "#0a0a14"
+    foreground = "#ff0000"
+    frame_color = "#ff0000"
+    timeout = 0
+    # Icon for critical notifications
+    new_icon = dialog-error
+
+# Custom app-specific settings
+
+[discord]
+    appname = discord
+    frame_color = "#7289DA"
+    timeout = 5
+
+[spotify]
+    appname = Spotify
+    frame_color = "#1DB954"
+    timeout = 5
+
+[firefox]
+    appname = firefox
+    frame_color = "#FF9500"
+    timeout = 5
+
+[telegram]
+    appname = telegram-desktop
+    frame_color = "#0088cc"
+    timeout = 5
+

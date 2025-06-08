@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Bell SVG -->
+  <defs>
+    <!-- Metal texture -->
+    <linearGradient id="bellGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a89653"/>
+      <stop offset="50%" stop-color="#8e793e"/>
+      <stop offset="100%" stop-color="#6b5b2e"/>
+    </linearGradient>
+    
+    <!-- Sound wave effect -->
+    <filter id="soundWave" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <g id="bell">
+    <!-- Bell body with Victorian ornate style -->
+    <path d="M40 40 C25 70 75 70 60 40" 
+          fill="url(#bellGradient)" stroke="#d3c7a6" stroke-width="2"/>
+    
+    <!-- Bell body details -->
+    <path d="M43 45 C35 65 65 65 57 45" 
+          fill="none" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Bell decorative engravings -->
+    <path d="M45 50 L55 50" stroke="#6b5b2e" stroke-width="0.5" opacity="0.8"/>
+    <path d="M43 55 L57 55" stroke="#6b5b2e" stroke-width="0.5" opacity="0.8"/>
+    <path d="M40 60 L60 60" stroke="#6b5b2e" stroke-width="0.5" opacity="0.8"/>
+    
+    <!-- Small decorative filigree -->
+    <path d="M45 52 C47 54 53 54 55 52" 
+          fill="none" stroke="#6b5b2e" stroke-width="0.5" opacity="0.6"/>
+    <path d="M43 57 C45 59 55 59 57 57" 
+          fill="none" stroke="#6b5b2e" stroke-width="0.5" opacity="0.6"/>
+    
+    <!-- Bell top -->
+    <path d="M45 30 A5 5 0 0 1 55 30 L55 40 L45 40 Z" 
+          fill="url(#bellGradient)" stroke="#d3c7a6" stroke-width="1"/>
+    
+    <!-- Bell top design -->
+    <path d="M47 35 L53 35" stroke="#6b5b2e" stroke-width="0.5" opacity="0.8"/>
+    
+    <!-- Bell handle with ornate design -->
+    <path d="M45 30 A5 10 0 0 1 55 30" 
+          fill="none" stroke="#d3c7a6" stroke-width="2"/>
+    
+    <!-- Handle details -->
+    <path d="M48 25 A2 2 0 0 1 52 25" 
+          fill="none" stroke="#d3c7a6" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Bell clapper -->
+    <path d="M50 40 L50 60" 
+          fill="none" stroke="#d3c7a6" stroke-width="1"/>
+    <path d="M45 65 A5 5 0 0 0 55 65" 
+          fill="none" stroke="#d3c7a6" stroke-width="1"/>
+    
+    <!-- Clapper detail -->
+    <circle cx="50" cy="63" r="3" fill="#8e793e" stroke="#d3c7a6" stroke-width="0.5"/>
+    
+    <!-- Sound waves -->
+    <path d="M35 50 A20 20 0 0 1 35 70" 
+          fill="none" stroke="#d3c7a6" stroke-width="1" opacity="0.5" 
+          stroke-dasharray="2,2" filter="url(#soundWave)">
+      <animate attributeName="opacity" 
+               values="0.3;0.6;0.3" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </path>
+    <path d="M65 50 A20 20 0 0 0 65 70" 
+          fill="none" stroke="#d3c7a6" stroke-width="1" opacity="0.5" 
+          stroke-dasharray="2,2" filter="url(#soundWave)">
+      <animate attributeName="opacity" 
+               values="0.3;0.6;0.3" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Subtle bell glow -->
+    <ellipse cx="50" cy="55" rx="20" ry="15" 
+             fill="#d3c7a6" opacity="0.05">
+      <animate attributeName="opacity" 
+               values="0.05;0.1;0.05" 
+               dur="2s" 
+               repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

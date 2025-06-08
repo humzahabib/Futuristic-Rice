@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Logo background -->
+  <defs>
+    <linearGradient id="logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1A1A1A" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base rectangle with angular corners -->
+  <path d="M30,10 L170,10 L190,30 L190,170 L170,190 L30,190 L10,170 L10,30 Z" fill="url(#logo-bg)" stroke="#FFCC00" stroke-width="3"/>
+  
+  <!-- Batman logo -->
+  <g transform="translate(100, 100)">
+    <path d="M0,-80 C-10,-80 -40,-40 -40,-40 L-20,-30 L-40,0 C-40,20 -20,40 0,40 C20,40 40,20 40,0 L20,-30 L40,-40 C40,-40 10,-80 0,-80 Z" fill="#FFCC00"/>
+  </g>
+</svg>

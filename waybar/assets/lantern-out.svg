@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Lantern Out (Extinguished) SVG -->
+  <defs>
+    <!-- Metal texture -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a89653"/>
+      <stop offset="50%" stop-color="#8e793e"/>
+      <stop offset="100%" stop-color="#6b5b2e"/>
+    </linearGradient>
+    
+    <!-- Smoke effect -->
+    <filter id="smoke" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <g id="lantern-out">
+    <!-- Lantern body with weathered metal texture -->
+    <path d="M40 20 L60 20 L65 80 L35 80 Z" 
+          fill="#181818" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Worn metal details with more pronounced aging -->
+    <path d="M43 25 L57 25" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    <path d="M45 35 L55 35" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    <path d="M45 75 L55 75" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Rust spots -->
+    <circle cx="43" cy="30" r="1" fill="#580000" opacity="0.4"/>
+    <circle cx="57" cy="45" r="1.5" fill="#580000" opacity="0.4"/>
+    <circle cx="38" cy="65" r="2" fill="#580000" opacity="0.4"/>
+    
+    <!-- Lantern top with ornate Victorian design -->
+    <path d="M35 20 L40 10 L60 10 L65 20" 
+          fill="none" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Decorative flourishes -->
+    <path d="M40 13 L45 13" stroke="#8e793e" stroke-width="1" opacity="0.8"/>
+    <path d="M55 13 L60 13" stroke="#8e793e" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Lantern handle with decorative curve -->
+    <path d="M40 10 A15 10 0 0 0 60 10" 
+          fill="none" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Lantern window frame with aged appearance -->
+    <rect x="45" y="30" width="10" height="40" 
+          fill="#0f0f0f" stroke="#8e793e" stroke-width="1"/>
+    
+    <!-- Cracked glass -->
+    <path d="M45 40 L55 40" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    <path d="M45 50 L55 50" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    <path d="M45 60 L55 60" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    <path d="M50 30 L48 45" stroke="#d3c7a6" stroke-width="0.5" opacity="0.3"/>
+    <path d="M50 50 L53 65" stroke="#d3c7a6" stroke-width="0.5" opacity="0.3"/>
+    
+    <!-- Subtle smoke wisps -->
+    <path d="M48 35 C50 33 52 33 54 35 C56 37 54 39 52 40 C50 41 48 40 48 38" 
+          fill="#d3c7a6" opacity="0.1" filter="url(#smoke)"/>
+  </g>
+</svg>

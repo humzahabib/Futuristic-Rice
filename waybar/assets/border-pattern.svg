@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 20">
+  <!-- Border Pattern SVG -->
+  <defs>
+    <!-- Blood texture -->
+    <linearGradient id="bloodLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b0000" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#8b0000" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8b0000" stop-opacity="0.2"/>
+    </linearGradient>
+    
+    <!-- Metal texture -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a89653"/>
+      <stop offset="50%" stop-color="#8e793e"/>
+      <stop offset="100%" stop-color="#6b5b2e"/>
+    </linearGradient>
+    
+    <!-- Aged metal -->
+    <filter id="agedMetal" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.2" numOctaves="2" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="0.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <g id="border-pattern">
+    <!-- Main blood line -->
+    <path d="M0 10 L300 10" 
+          stroke="url(#bloodLine)" stroke-width="1" stroke-dasharray="1,5"/>
+    
+    <!-- Vertical ornamental elements suggesting Victorian ironwork -->
+    <path d="M10 5 L10 15 M30 5 L30 15 M50 5 L50 15 M70 5 L70 15 M90 5 L90 15 
+             M110 5 L110 15 M130 5 L130 15 M150 5 L150 15 M170 5 L170 15 M190 5 L190 15
+             M210 5 L210 15 M230 5 L230 15 M250 5 L250 15 M270 5 L270 15 M290 5 L290 15" 
+          stroke="#d3c7a6" stroke-width="1"/>
+    
+    <!-- Decorative Gothic arch elements -->
+    <path d="M20 10 L25 5 L30 10 M60 10 L65 5 L70 10 M100 10 L105 5 L110 10 
+             M140 10 L145 5 L150 10 M180 10 L185 5 L190 10 M220 10 L225 5 L230 10 M260 10 L265 5 L270 10" 
+          fill="none" stroke="url(#metalGradient)" stroke-width="1" filter="url(#agedMetal)"/>
+    
+    <!-- Circular motifs suggesting runes or blood droplets -->
+    <circle cx="40" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="80" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="120" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="160" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="200" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="240" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    <circle cx="280" cy="10" r="3" fill="#580000" opacity="0.7"/>
+    
+    <!-- Inner detail for circular motifs -->
+    <circle cx="40" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="80" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="120" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="160" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="200" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="240" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    <circle cx="280" cy="10" r="1" fill="#d3c7a6" opacity="0.5"/>
+    
+    <!-- Subtle patterned texture overlay -->
+    <rect x="0" y="0" width="300" height="20" 
+          fill="url('#pattern')" opacity="0.1"/>
+  </g>
+</svg>

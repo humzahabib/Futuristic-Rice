@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1A1A1A" />
+    </linearGradient>
+    
+    <!-- Rain pattern -->
+    <pattern id="rain" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <line x1="20" y1="0" x2="15" y2="100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.07"/>
+      <line x1="40" y1="0" x2="35" y2="100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.07"/>
+      <line x1="60" y1="0" x2="55" y2="100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.07"/>
+      <line x1="80" y1="0" x2="75" y2="100" stroke="#FFFFFF" stroke-width="0.5" opacity="0.07"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Rain overlay -->
+  <rect width="1920" height="1080" fill="url(#rain)"/>
+  
+  <!-- Gotham City skyline silhouette -->
+  <path d="M0,1080 L0,600 L50,620 L100,580 L150,600 L200,570 L250,610 L300,580 L350,620 L400,590 L450,610 L500,570 L550,600 L600,580 L650,610 L700,590 L750,620 L800,570 L850,600 L900,580 L950,610 L1000,580 L1050,620 L1100,590 L1150,610 L1200,570 L1250,600 L1300,580 L1350,610 L1400,570 L1450,600 L1500,580 L1550,620 L1600,570 L1650,600 L1700,580 L1750,610 L1800,580 L1850,620 L1900,590 L1920,600 L1920,1080 Z" fill="#050505" opacity="0.8"/>
+  
+  <!-- Bat signal in the sky -->
+  <circle cx="1600" cy="200" r="100" fill="#1A1A1A" opacity="0.6"/>
+  <circle cx="1600" cy="200" r="80" fill="#333333" opacity="0.6"/>
+  
+  <g transform="translate(1600, 200) scale(0.5)">
+    <path d="M0,-80 C-10,-80 -40,-40 -40,-40 L-20,-30 L-40,0 C-40,20 -20,40 0,40 C20,40 40,20 40,0 L20,-30 L40,-40 C40,-40 10,-80 0,-80 Z" fill="#FFCC00"/>
+  </g>
+</svg>

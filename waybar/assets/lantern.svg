@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Lantern SVG -->
+  <defs>
+    <!-- Metal texture -->
+    <linearGradient id="metalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a89653"/>
+      <stop offset="50%" stop-color="#8e793e"/>
+      <stop offset="100%" stop-color="#6b5b2e"/>
+    </linearGradient>
+    
+    <!-- Light glow -->
+    <radialGradient id="lightGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#e8ddcb" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#e8ddcb" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#e8ddcb" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Flame flicker -->
+    <filter id="flicker" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="1" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <g id="lantern">
+    <!-- Lantern body with weathered metal texture -->
+    <path d="M40 20 L60 20 L65 80 L35 80 Z" 
+          fill="#2c2c2c" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Worn metal details -->
+    <path d="M43 25 L57 25" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    <path d="M45 35 L55 35" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    <path d="M45 75 L55 75" stroke="#6b5b2e" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Lantern top with ornate Victorian design -->
+    <path d="M35 20 L40 10 L60 10 L65 20" 
+          fill="none" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Decorative flourishes -->
+    <path d="M40 13 L45 13" stroke="#8e793e" stroke-width="1" opacity="0.8"/>
+    <path d="M55 13 L60 13" stroke="#8e793e" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Lantern handle with decorative curve -->
+    <path d="M40 10 A15 10 0 0 0 60 10" 
+          fill="none" stroke="url(#metalGradient)" stroke-width="2"/>
+    
+    <!-- Lantern window frame with aged appearance -->
+    <rect x="45" y="30" width="10" height="40" 
+          fill="#e8ddcb" opacity="0.1" stroke="#8e793e" stroke-width="1"/>
+    
+    <!-- Window frame details -->
+    <path d="M45 40 L55 40" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    <path d="M45 50 L55 50" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    <path d="M45 60 L55 60" stroke="#8e793e" stroke-width="0.5" opacity="0.7"/>
+    
+    <!-- Lantern light with subtle animation -->
+    <rect x="45" y="30" width="10" height="40" 
+          fill="url(#lightGlow)" opacity="0.7" filter="url(#flicker)">
+      <animate attributeName="opacity" 
+               values="0.6;0.8;0.6" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Light source -->
+    <ellipse cx="50" cy="50" rx="3" ry="5" 
+             fill="#e8ddcb" opacity="0.9">
+      <animate attributeName="ry" 
+               values="5;6;5" 
+               dur="2s" 
+               repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

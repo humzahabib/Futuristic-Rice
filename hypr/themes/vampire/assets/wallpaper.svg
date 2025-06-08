@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1E0000" />
+    </linearGradient>
+    
+    <!-- Blood drip pattern -->
+    <pattern id="blood-drip" x="0" y="0" width="50" height="200" patternUnits="userSpaceOnUse">
+      <path d="M 25,0 L 25,100 Q 40,150 25,200 Q 10,150 25,100 Z" fill="#800000" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Blood drip overlay -->
+  <rect width="1920" height="1080" fill="url(#blood-drip)"/>
+  
+  <!-- Decorative Gothic elements -->
+  <path d="M0,300 Q960,200 1920,300 L1920,0 L0,0 Z" fill="#121212" opacity="0.7"/>
+  <path d="M0,310 Q960,210 1920,310 L1920,300 Q960,200 0,300 Z" fill="#800000" opacity="0.8"/>
+  
+  <!-- Gothic windows -->
+  <g transform="translate(760, 400)">
+    <path d="M0,0 L0,200 L80,300 L160,200 L160,0 Z" fill="#121212" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M80,0 L80,250" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M40,100 A40,40 0 0,0 120,100" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  </g>
+  
+  <g transform="translate(960, 400)">
+    <path d="M0,0 L0,200 L80,300 L160,200 L160,0 Z" fill="#121212" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M80,0 L80,250" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <path d="M40,100 A40,40 0 0,0 120,100" fill="none" stroke="#D4AF37" stroke-width="2"/>
+  </g>
+  
+  <!-- Blood moon -->
+  <circle cx="1600" cy="250" r="100" fill="#800000"/>
+  <circle cx="1600" cy="250" r="90" fill="#950000"/>
+  <circle cx="1600" cy="250" r="80" fill="#AA0000"/>
+  
+  <!-- Vampire castle silhouette -->
+  <path d="M0,1080 L0,700 L50,600 L100,700 L150,650 L200,700 L250,600 L300,700 L350,650 L400,700 L450,600 L500,700 L550,650 L600,700 L650,600 L700,700 L750,650 L800,700 L850,600 L900,700 L950,650 L1000,700 L1050,600 L1100,700 L1150,650 L1200,700 L1250,600 L1300,700 L1350,650 L1400,700 L1450,600 L1500,700 L1550,650 L1600,700 L1650,600 L1700,700 L1750,650 L1800,700 L1850,600 L1900,700 L1920,670 L1920,1080 Z" fill="#0A0A0A"/>
+  
+  <!-- Vampire text -->
+  <g transform="translate(960, 800)">
+    <text x="0" y="0" font-family="'Cinzel', serif" font-size="100" font-weight="bold" fill="#800000" text-anchor="middle">VAMPIRE</text>
+    <text x="0" y="60" font-family="'Cinzel', serif" font-size="40" font-weight="bold" fill="#D4AF37" text-anchor="middle">EMBRACE THE DARKNESS</text>
+  </g>
+</svg>

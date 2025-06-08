@@ -1,0 +1,41 @@
+# Basic but effective cyberpunk swaylock config
+# Save to ~/.config/swaylock/config
+
+# Core effects that definitely work
+screenshots
+effect-blur=8x2
+effect-vignette=0.5:0.5
+indicator
+
+# Cyberpunk colors - simplified but effective
+inside-color=000000aa
+ring-color=ff00ffaa
+line-color=00000000
+key-hl-color=00ddffff
+text-color=00ddffff
+
+#Clear Color
+inside-clear-color=000000aa
+ring-clear-color=ff00ffaa
+text-clear-color=00ddffff
+line-clear-color=00ddffff
+
+# Wrong auth colors - red themed
+inside-wrong-color=aa0000aa
+ring-wrong-color=ff0000aa
+text-wrong-color=ff0000ff
+
+# Verifying colors - blue themed
+inside-ver-color=0000aaaa
+ring-ver-color=0000ffaa
+text-ver-color=0000ffff
+
+# Other settings
+indicator-radius=100
+indicator-thickness=10
+clock
+timestr=%H:%M:%S
+
+# Make it more minimal
+hide-keyboard-layout
+indicator-caps-lock

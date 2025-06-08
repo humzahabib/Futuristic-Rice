@@ -1,0 +1,296 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'JetBrainsMono Nerd Font', 'Symbols Nerd Font', monospace;
+    font-size: 13px;
+    font-weight: bold;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: rgba(10, 10, 20, 0.85);
+    border-bottom: 2px solid #00ddff;
+    color: #00ddff;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* Cyberpunk Animation for window borders - proper GTK syntax */
+@keyframes pulse_border {
+    to {
+        border-bottom-color: #ff00dd;
+        box-shadow: 0 0 10px #ff00dd;
+    }
+}
+
+@keyframes pulse_opacity {
+    to {
+        opacity: 0.7;
+    }
+}
+
+window#waybar {
+    border-bottom: 2px solid #00ddff;
+    box-shadow: 0 0 8px #00ddff;
+    animation-name: pulse_border;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    background-color: rgba(10, 10, 20, 0.5);
+    color: #00ddff;
+    border-bottom: 2px solid transparent;
+    margin: 2px;
+}
+
+#workspaces button:hover {
+    background-color: rgba(0, 255, 221, 0.3);
+    border-bottom: 2px solid #00ffdd;
+    box-shadow: inset 0 -2px #00ffdd;
+}
+
+#workspaces button.active {
+    background-color: rgba(255, 0, 221, 0.2);
+    border-bottom: 2px solid #ff00dd;
+    box-shadow: inset 0 -2px #ff00dd, 0 0 5px #ff00dd;
+    color: #ff00dd;
+    text-shadow: 0 0 5px #ff00dd;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(255, 85, 85, 0.4);
+    border-bottom: 2px solid #ff5555;
+    color: #ff5555;
+    animation-name: pulse_opacity;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#submap {
+    background-color: rgba(255, 0, 221, 0.2);
+    color: #ff00dd;
+    border-left: 2px solid rgba(255, 0, 221, 0.4);
+    border-right: 2px solid rgba(255, 0, 221, 0.4);
+    padding: 0 8px;
+    margin: 0 4px;
+    text-shadow: 0 0 5px #ff00dd;
+}
+
+#window {
+    color: #ffaa00;
+    padding: 0 8px;
+    margin: 0 4px;
+    text-shadow: 0 0 2px #ffaa00;
+    background-color: rgba(255, 170, 0, 0.1);
+    border-bottom: 2px solid #ffaa00;
+}
+
+#custom-arch {
+    color: #ff5555;
+    font-size: 18px;
+    margin: 0 8px;
+    padding: 0 8px;
+    text-shadow: 0 0 5px #ff5555;
+    font-weight: bold;
+    border-bottom: 2px solid #ff5555;
+}
+
+#custom-netstatus {
+    color: #00ddff;
+    padding: 0 8px;
+    text-shadow: 0 0 3px #00ddff;
+    border-bottom: 2px solid #00ddff;
+}
+
+#clock {
+    color: #00ddff;
+    padding: 0 8px;
+    margin: 0 4px;
+    text-shadow: 0 0 5px #00ddff;
+    border-bottom: 2px solid #00ddff;
+}
+
+#idle_inhibitor
+{
+    color: #00ddff;
+    margin: 0 8px;
+}
+
+#custom-separator {
+    color: #ff00dd;
+    font-weight: bold;
+    padding: 0 2px;
+    margin: 0;
+    text-shadow: 0 0 5px #ff00dd;
+}
+
+#battery,
+#temperature,
+#network,
+#pulseaudio,
+#custom-power {
+    padding: 0 8px;
+    margin: 0 2px;
+    border-bottom: 2px solid;
+}
+
+#battery {
+    color: #ffaa00;
+    border-bottom-color: #ffaa00;
+    text-shadow: 0 0 3px #ffaa00;
+}
+
+#battery.charging, #battery.plugged {
+    color: #00ff00;
+    background-color: rgba(0, 255, 0, 0.2);
+    border-bottom-color: #00ff00;
+    text-shadow: 0 0 3px #00ff00;
+    box-shadow: 0 0 5px #00ff00;
+}
+
+@keyframes critical_blink {
+    to {
+        background-color: rgba(255, 0, 0, 0.5);
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-bottom-color: #ff0000;
+    text-shadow: 0 0 3px #ff0000;
+    animation-name: critical_blink;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#temperature {
+    color: #f8f8f2;
+    background-color: rgba(248, 248, 242, 0.1);
+    border-bottom-color: #f8f8f2;
+    text-shadow: 0 0 3px #f8f8f2;
+}
+
+#temperature.critical {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-bottom-color: #ff0000;
+    text-shadow: 0 0 3px #ff0000;
+    animation-name: critical_blink;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network {
+    color: #00ff00;
+    background-color: rgba(0, 255, 0, 0.1);
+    border-bottom-color: #00ff00;
+    text-shadow: 0 0 3px #00ff00;
+}
+
+#network.disconnected {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-bottom-color: #ff0000;
+    text-shadow: 0 0 3px #ff0000;
+    animation-name: critical_blink;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio {
+    color: #9b59b6;
+    background-color: rgba(155, 89, 182, 0.1);
+    border-bottom-color: #9b59b6;
+    text-shadow: 0 0 3px #9b59b6;
+}
+
+#pulseaudio.muted {
+    color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.2);
+    border-bottom-color: #ff0000;
+    text-shadow: 0 0 3px #ff0000;
+}
+
+#custom-power {
+    color: #ff5555;
+    background-color: rgba(255, 85, 85, 0.2);
+    border-bottom-color: #ff5555;
+    text-shadow: 0 0 3px #ff5555;
+    font-size: 15px;
+    padding: 0 8px;
+}
+
+#custom-arch:hover
+{
+    text-shadow: 0 0 8px #ff5555;
+}
+
+#clock:hover,
+#custom-power:hover {
+    background-color: rgba(255, 0, 221, 0.4);
+    border-bottom-color: #ff00dd;
+    box-shadow: 0 0 8px #ff00dd;
+}
+
+tooltip {
+    background-color: rgba(10, 10, 20, 0.95);
+    border: 2px solid #00ddff;
+    box-shadow: 0 0 6px #00ddff;
+}
+
+tooltip label {
+    color: #00ddff;
+    text-shadow: 0 0 3px #00ddff;
+}
+
+/* Calendar styling - more cyberpunk */
+calendar {
+    background-color: rgba(10, 10, 20, 0.95);
+    border: 2px solid #00ddff;
+    box-shadow: 0 0 10px #00ddff;
+    color: #00ddff;
+}
+
+calendar:selected {
+    background-color: #ff00dd;
+    color: #ffffff;
+    text-shadow: 0 0 3px #ffffff;
+    box-shadow: 0 0 5px #ff00dd;
+}
+
+calendar.header {
+    color: #ffaa00;
+    text-shadow: 0 0 3px #ffaa00;
+}
+
+calendar.button {
+    color: #00ffdd;
+    text-shadow: 0 0 3px #00ffdd;
+}
+
+calendar.highlight {
+    color: #ff00dd;
+    font-weight: bold;
+    text-shadow: 0 0 3px #ff00dd;
+}
+
+calendar:indeterminate {
+    color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Blood drop spinner -->
+  <path d="M100,10 Q130,50 130,90 Q130,130 100,150 Q70,130 70,90 Q70,50 100,10 Z" fill="#800000" opacity="0.8"/>
+  
+  <!-- Inner circle -->
+  <circle cx="100" cy="100" r="30" fill="#D4AF37" opacity="0.5"/>
+  
+  <!-- Pulsing ring -->
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#800000" stroke-width="2"/>
+</svg>

@@ -1,0 +1,165 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/separator",
+        "hyprland/window",
+        "custom/separator",
+        "hyprland/submap",
+    ],
+    "modules-center": [
+        "custom/netstatus",
+	"custom/separator",
+        "custom/arch",
+	"custom/separator",
+        "clock"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "pulseaudio",
+        "custom/separator",
+        "temperature",
+        "custom/separator",
+        "battery",
+        "custom/separator",
+        "custom/power"
+    ],
+    "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      }
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate",
+        "sort-by-number": true,
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"
+    },
+    
+    "hyprland/submap": {
+        "format": "{}",
+        "tooltip": false
+    },
+    
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 25,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": " $1",
+            "(.*)Code(.*)": "  VS Code",
+            "(.*)~(.*)": "  Kitty",
+            "(.*)pacman(.*)": "  Kitty",
+            "(.*)nvim(.*)": "  Neovim $1",
+            "Spotify": " Spotify"
+    },
+        "separate-outputs": true
+    },
+    
+    "custom/arch": {
+        "format": "󰣇",
+        "tooltip": false,
+        "on-click": "rofi -show drun"
+    },
+    
+    "custom/netstatus": {
+        "exec": "echo '{\"text\":\"CONNECTED TO GRID\", \"tooltip\":\"UPLINK STATUS: ACTIVE | ENCRYPTED: TRUE\"}'",
+        "return-type": "json",
+        "interval": 10
+    },
+    
+    "custom/separator": {
+        "format": "//",
+        "interval": "once",
+        "tooltip": false
+    },
+    
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "format-alt": "{:%Y-%m-%d}",
+        "tooltip-format": "<span color='#ff00ff'><big>{:%B %Y}</big></span>\n<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffaa00'>{}</span>",
+                "weekdays": "<span color='#00ffff'>{}</span>",
+                "today": "<span color='#ff00ff'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "mode",
+            "on-click-right": "mode"
+        }
+    },
+    
+    "temperature": {
+        "critical-threshold": 80,
+        "interval": 1,
+        "format": "󰔏 {temperatureC}°C",
+        "format-critical": "󱃂 {temperatureC}°C!",
+        "tooltip": false
+    },
+    
+    "battery": {
+        "bat": "BAT0",
+        "adapter": "AC",
+        "interval": 10,
+        "format": "{icon} {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-critical": "󰂃 {capacity}%",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        }
+    },
+    
+    "network": {
+        "format-wifi": "󰖩 {signalStrength}%",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰖪 OFFLINE",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 20,
+        "on-click": "nm-connection-editor"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰄝",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 5
+    },
+    
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip": false,
+        "on-click": "rofi -show power-menu -modi power-menu:~/.local/bin/rofi-power-menu"
+    }
+}

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1E0000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Blood moon -->
+  <circle cx="1500" cy="300" r="150" fill="#800000" opacity="0.8"/>
+  <circle cx="1500" cy="300" r="130" fill="#950000" opacity="0.8"/>
+  
+  <!-- Gothic border at top -->
+  <path d="M0,100 Q240,50 480,100 Q720,150 960,100 Q1200,50 1440,100 Q1680,150 1920,100 L1920,0 L0,0 Z" fill="#121212"/>
+  <path d="M0,110 Q240,60 480,110 Q720,160 960,110 Q1200,60 1440,110 Q1680,160 1920,110 L1920,100 Q1680,150 1440,100 Q1200,50 960,100 Q720,150 480,100 Q240,50 0,100 Z" fill="#800000"/>
+  
+  <!-- Gothic border at bottom -->
+  <path d="M0,980 Q240,1030 480,980 Q720,930 960,980 Q1200,1030 1440,980 Q1680,930 1920,980 L1920,1080 L0,1080 Z" fill="#121212"/>
+  <path d="M0,970 Q240,1020 480,970 Q720,920 960,970 Q1200,1020 1440,970 Q1680,920 1920,970 L1920,980 Q1680,930 1440,980 Q1200,1030 960,980 Q720,930 480,980 Q240,1030 0,980 Z" fill="#800000"/>
+  
+  <!-- Centered Arch Linux logo -->
+  <g transform="translate(960, 400)">
+    <path d="M0,-150 L150,150 L-150,150 Z" fill="none" stroke="#D4AF37" stroke-width="5"/>
+    <circle cx="0" cy="40" r="30" fill="none" stroke="#D4AF37" stroke-width="5"/>
+  </g>
+  
+  <!-- Vampire text -->
+  <text x="960" y="700" font-family="'Cinzel', serif" font-size="50" font-weight="bold" fill="#800000" text-anchor="middle">ARCH LINUX</text>
+  <text x="960" y="760" font-family="'Cinzel', serif" font-size="30" font-weight="bold" fill="#D4AF37" text-anchor="middle">VAMPIRE EDITION</text>
+</svg>

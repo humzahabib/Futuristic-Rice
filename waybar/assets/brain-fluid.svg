@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Brain Fluid SVG -->
+  <defs>
+    <!-- Glass container -->
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e8ddcb" stop-opacity="0.05"/>
+      <stop offset="45%" stop-color="#e8ddcb" stop-opacity="0.2"/>
+      <stop offset="55%" stop-color="#e8ddcb" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#e8ddcb" stop-opacity="0.05"/>
+    </linearGradient>
+    
+    <!-- Eldritch fluid -->
+    <linearGradient id="fluidGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#32174d"/>
+      <stop offset="60%" stop-color="#271339"/>
+      <stop offset="100%" stop-color="#1a0d26"/>
+    </linearGradient>
+    
+    <!-- Cosmic swirl -->
+    <filter id="cosmicSwirl" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    
+    <!-- Container shine -->
+    <linearGradient id="shineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8ddcb" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#e8ddcb" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  
+  <g id="brain-fluid">
+    <!-- Container -->
+    <path d="M30 30 L70 30 L65 80 C65 85 35 85 35 80 Z" 
+          fill="url(#glassGradient)" 
+          stroke="#d3c7a6" stroke-width="2"/>
+    
+    <!-- Container details -->
+    <path d="M32 40 L68 40" stroke="#d3c7a6" stroke-width="0.5" opacity="0.5"/>
+    <path d="M32 60 L68 60" stroke="#d3c7a6" stroke-width="0.5" opacity="0.5"/>
+    
+    <!-- Container shine -->
+    <path d="M30 30 L45 35 L45 75 L35 80" 
+          fill="url(#shineGradient)" opacity="0.2"/>
+    
+    <!-- Fluid -->
+    <path d="M35 75 C35 80 65 80 65 75 L62 40 L38 40 Z" 
+          fill="url(#fluidGradient)" opacity="0.7" 
+          filter="url(#cosmicSwirl)">
+      <animate attributeName="opacity" 
+               values="0.65;0.75;0.65" 
+               dur="10s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Brain shape in fluid -->
+    <path d="M45 50 C40 45 40 55 45 55 C50 55 50 65 55 65 C60 65 60 55 55 50 C50 45 50 55 45 50" 
+          fill="none" stroke="#e8ddcb" stroke-width="1" opacity="0.5">
+      <animate attributeName="d" 
+               values="M45 50 C40 45 40 55 45 55 C50 55 50 65 55 65 C60 65 60 55 55 50 C50 45 50 55 45 50;
+                      M45 52 C42 47 42 57 45 57 C48 57 48 67 55 67 C62 67 62 57 55 52 C48 47 48 57 45 52;
+                      M45 50 C40 45 40 55 45 55 C50 55 50 65 55 65 C60 65 60 55 55 50 C50 45 50 55 45 50" 
+               dur="15s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Cosmic particles -->
+    <circle cx="45" cy="55" r="1" fill="#e8ddcb" opacity="0.6">
+      <animate attributeName="cy" 
+               values="55;60;55" 
+               dur="8s" 
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="55" cy="60" r="0.8" fill="#e8ddcb" opacity="0.6">
+      <animate attributeName="cy" 
+               values="60;50;60" 
+               dur="12s" 
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="50" cy="45" r="1.2" fill="#e8ddcb" opacity="0.6">
+      <animate attributeName="cy" 
+               values="45;65;45" 
+               dur="10s" 
+               repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Fluid surface meniscus -->
+    <path d="M38 40 C45 37 55 37 62 40" 
+          fill="none" stroke="#271339" stroke-width="1" opacity="0.8"/>
+    
+    <!-- Subtle cosmic glow at the top of the fluid -->
+    <ellipse cx="50" cy="45" rx="10" ry="4" 
+             fill="#32174d" opacity="0.4">
+      <animate attributeName="opacity" 
+               values="0.3;0.5;0.3" 
+               dur="7s" 
+               repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Avatar background -->
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A" />
+      <stop offset="100%" stop-color="#333333" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#avatar-bg)" stroke="#FFCC00" stroke-width="3"/>
+  
+  <!-- Batman mask silhouette -->
+  <path d="M60,80 Q100,50 140,80 L140,120 L120,140 L80,140 L60,120 Z" fill="#0A0A0A"/>
+  
+  <!-- Mask eyes -->
+  <path d="M70,90 Q85,80 100,90 L100,110 L70,110 Z" fill="#1A1A1A"/>
+  <path d="M130,90 Q115,80 100,90 L100,110 L130,110 Z" fill="#1A1A1A"/>
+  
+  <!-- Batman ears -->
+  <path d="M60,80 L50,50 L70,80" fill="#0A0A0A"/>
+  <path d="M140,80 L150,50 L130,80" fill="#0A0A0A"/>
+  
+  <!-- Batman emblem -->
+  <g transform="translate(100, 160) scale(0.3)">
+    <path d="M0,-80 C-10,-80 -40,-40 -40,-40 L-20,-30 L-40,0 C-40,20 -20,40 0,40 C20,40 40,20 40,0 L20,-30 L40,-40 C40,-40 10,-80 0,-80 Z" fill="#FFCC00"/>
+  </g>
+</svg>

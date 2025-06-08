@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Spinner design -->
+  <circle cx="100" cy="100" r="90" fill="none" stroke="#00F6FF" stroke-width="4" opacity="0.2"/>
+  <path d="M100,10 A90,90 0 0,1 190,100" fill="none" stroke="#00F6FF" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Inner elements -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#FF00FF" stroke-width="3" opacity="0.15"/>
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#FFFC00" stroke-width="2" opacity="0.1"/>
+  
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="5" fill="#00F6FF"/>
+</svg>

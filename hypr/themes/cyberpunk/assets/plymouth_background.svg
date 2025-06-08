@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A16" />
+      <stop offset="100%" stop-color="#0F0F20" />
+    </linearGradient>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#00F6FF" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Grid overlay -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Loading circle -->
+  <circle cx="960" cy="540" r="100" fill="none" stroke="#00F6FF" stroke-width="4" opacity="0.5"/>
+  <circle cx="960" cy="540" r="80" fill="none" stroke="#FF00FF" stroke-width="3" opacity="0.6"/>
+  <circle cx="960" cy="540" r="60" fill="none" stroke="#FFFC00" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Horizontal lines -->
+  <line x1="600" y1="680" x2="1320" y2="680" stroke="#FF00FF" stroke-width="1" opacity="0.7"/>
+  <line x1="600" y1="690" x2="1320" y2="690" stroke="#00F6FF" stroke-width="2" opacity="0.8"/>
+  <line x1="600" y1="700" x2="1320" y2="700" stroke="#FFFC00" stroke-width="1" opacity="0.6"/>
+  
+  <!-- Loading text -->
+  <text x="960" y="800" font-family="'Arial'" font-size="30" font-weight="bold" fill="#00F6FF" text-anchor="middle">SYSTEM LOADING</text>
+</svg>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Fire SVG -->
+  <defs>
+    <!-- Fire gradient -->
+    <linearGradient id="fireGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b0000"/>
+      <stop offset="50%" stop-color="#a30000"/>
+      <stop offset="100%" stop-color="#580000"/>
+    </linearGradient>
+    
+    <!-- Inner fire gradient -->
+    <radialGradient id="innerFireGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="20%">
+      <stop offset="0%" stop-color="#e8ddcb"/>
+      <stop offset="60%" stop-color="#d3c7a6"/>
+      <stop offset="100%" stop-color="#8b0000"/>
+    </radialGradient>
+    
+    <!-- Fire glow -->
+    <filter id="fireGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- Fire flicker -->
+    <filter id="flicker" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+  
+  <g id="fire">
+    <!-- Fire glow backdrop -->
+    <ellipse cx="50" cy="70" rx="25" ry="15" 
+             fill="#8b0000" opacity="0.3" filter="url(#fireGlow)">
+      <animate attributeName="opacity" 
+               values="0.2;0.4;0.2" 
+               dur="5s" 
+               repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Fire base -->
+    <path d="M40 80 C20 60 30 30 50 40 C70 30 80 60 60 80 Z" 
+          fill="url(#fireGradient)" filter="url(#flicker)">
+      <animate attributeName="d" 
+               values="M40 80 C20 60 30 30 50 40 C70 30 80 60 60 80 Z;
+                      M40 80 C25 55 35 35 50 45 C65 35 75 55 60 80 Z;
+                      M40 80 C20 60 30 30 50 40 C70 30 80 60 60 80 Z" 
+               dur="4s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Fire inner -->
+    <path d="M45 75 C35 60 40 40 50 50 C60 40 65 60 55 75 Z" 
+          fill="url(#innerFireGradient)" opacity="0.9" filter="url(#flicker)">
+      <animate attributeName="d" 
+               values="M45 75 C35 60 40 40 50 50 C60 40 65 60 55 75 Z;
+                      M45 75 C40 55 45 45 50 55 C55 45 60 55 55 75 Z;
+                      M45 75 C35 60 40 40 50 50 C60 40 65 60 55 75 Z" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity" 
+               values="0.7;0.9;0.7" 
+               dur="2s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Fire details - embers -->
+    <circle cx="48" cy="55" r="1" fill="#e8ddcb" opacity="0.8">
+      <animate attributeName="cy" 
+               values="55;40;55" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity" 
+               values="0.8;0;0.8" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="52" cy="60" r="0.8" fill="#e8ddcb" opacity="0.8">
+      <animate attributeName="cy" 
+               values="60;45;60" 
+               dur="4s" 
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity" 
+               values="0.8;0;0.8" 
+               dur="4s" 
+               repeatCount="indefinite"/>
+    </circle>
+    <circle cx="45" cy="65" r="1.2" fill="#e8ddcb" opacity="0.8">
+      <animate attributeName="cy" 
+               values="65;50;65" 
+               dur="5s" 
+               repeatCount="indefinite"/>
+      <animate attributeName="opacity" 
+               values="0.8;0;0.8" 
+               dur="5s" 
+               repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Fire flickers and details -->
+    <path d="M47 50 L47 40" stroke="#e8ddcb" stroke-width="0.5" opacity="0.6">
+      <animate attributeName="d" 
+               values="M47 50 L47 40;
+                      M47 55 L47 45;
+                      M47 50 L47 40" 
+               dur="2s" 
+               repeatCount="indefinite"/>
+    </path>
+    <path d="M53 45 L53 35" stroke="#e8ddcb" stroke-width="0.5" opacity="0.6">
+      <animate attributeName="d" 
+               values="M53 45 L53 35;
+                      M53 50 L53 40;
+                      M53 45 L53 35" 
+               dur="3s" 
+               repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Burning log suggestion at bottom -->
+    <path d="M35 85 L65 85" stroke="#6b5b2e" stroke-width="3" opacity="0.5"/>
+    <path d="M38 83 L62 83" stroke="#8e793e" stroke-width="1" opacity="0.7"/>
+  </g>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1E0000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Gothic border at top -->
+  <path d="M0,100 Q240,50 480,100 Q720,150 960,100 Q1200,50 1440,100 Q1680,150 1920,100 L1920,0 L0,0 Z" fill="#121212"/>
+  <path d="M0,110 Q240,60 480,110 Q720,160 960,110 Q1200,60 1440,110 Q1680,160 1920,110 L1920,100 Q1680,150 1440,100 Q1200,50 960,100 Q720,150 480,100 Q240,50 0,100 Z" fill="#800000"/>
+  
+  <!-- Loading area -->
+  <rect x="710" y="440" width="500" height="200" rx="10" ry="10" fill="#121212" stroke="#D4AF37" stroke-width="2"/>
+  
+  <!-- Loading text -->
+  <text x="960" y="520" font-family="'Cinzel', serif" font-size="30" font-weight="bold" fill="#D4AF37" text-anchor="middle">SUMMONING DARKNESS</text>
+</svg>

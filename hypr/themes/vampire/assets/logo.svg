@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Logo background -->
+  <defs>
+    <linearGradient id="logo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#2E0000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base octagon -->
+  <path d="M60,20 L140,20 L180,60 L180,140 L140,180 L60,180 L20,140 L20,60 Z" fill="url(#logo-bg)" stroke="#D4AF37" stroke-width="3"/>
+  
+  <!-- Gothic "V" letter -->
+  <path d="M70,50 L100,150 L130,50" fill="none" stroke="#800000" stroke-width="8" stroke-linejoin="round"/>
+  
+  <!-- Decorative blood drops -->
+  <path d="M70,50 Q75,70 70,80 Q65,70 70,50 Z" fill="#800000"/>
+  <path d="M130,50 Q135,70 130,80 Q125,70 130,50 Z" fill="#800000"/>
+  
+  <!-- Bat silhouette -->
+  <path d="M100,100 L80,80 Q70,85 75,95 Q65,90 60,100 Q70,100 75,95 Q75,105 85,110 L100,100 L115,110 Q125,105 125,95 Q130,100 140,100 Q135,90 125,95 Q130,85 120,80 Z" fill="#800000"/>
+</svg>

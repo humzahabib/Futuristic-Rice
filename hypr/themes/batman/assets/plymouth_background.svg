@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1A1A1A" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Gotham City skyline silhouette -->
+  <path d="M0,1080 L0,800 L50,780 L100,790 L150,770 L200,780 L250,750 L300,780 L350,770 L400,790 L450,770 L500,780 L550,750 L600,780 L650,770 L700,790 L750,750 L800,780 L850,750 L900,770 L950,760 L1000,780 L1050,750 L1100,770 L1150,760 L1200,780 L1250,750 L1300,780 L1350,770 L1400,790 L1450,750 L1500,770 L1550,760 L1600,780 L1650,750 L1700,770 L1750,760 L1800,780 L1850,750 L1900,770 L1920,760 L1920,1080 Z" fill="#0A0A0A" opacity="0.7"/>
+  
+  <!-- Loading area -->
+  <rect x="710" y="440" width="500" height="100" rx="0" ry="0" fill="#1A1A1A" stroke="#333333" stroke-width="2"/>
+  
+  <!-- Bat symbol -->
+  <g transform="translate(960, 350) scale(1.5)">
+    <path d="M0,-80 C-10,-80 -40,-40 -40,-40 L-20,-30 L-40,0 C-40,20 -20,40 0,40 C20,40 40,20 40,0 L20,-30 L40,-40 C40,-40 10,-80 0,-80 Z" fill="#FFCC00"/>
+  </g>
+  
+  <!-- Loading text -->
+  <text x="960" y="500" font-family="'Gotham', sans-serif" font-size="30" font-weight="bold" fill="#FFFFFF" text-anchor="middle">LOADING...</text>
+</svg>

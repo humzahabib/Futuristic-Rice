@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Avatar background -->
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A16" />
+      <stop offset="100%" stop-color="#1A1A36" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#avatar-bg)" stroke="#00F6FF" stroke-width="3"/>
+  
+  <!-- Stylized user icon -->
+  <circle cx="100" cy="70" r="30" fill="none" stroke="#FF00FF" stroke-width="4"/>
+  <path d="M50,140 C50,110 150,110 150,140" fill="none" stroke="#FF00FF" stroke-width="4"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="#00F6FF" stroke-width="1" opacity="0.5"/>
+  <circle cx="100" cy="100" r="50" fill="none" stroke="#FFFC00" stroke-width="1" opacity="0.5"/>
+  
+  <!-- Stylized cyber elements -->
+  <line x1="60" y1="70" x2="85" y2="70" stroke="#00F6FF" stroke-width="2"/>
+  <line x1="115" y1="70" x2="140" y2="70" stroke="#00F6FF" stroke-width="2"/>
+</svg>

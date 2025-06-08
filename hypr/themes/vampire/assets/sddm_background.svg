@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A0A" />
+      <stop offset="100%" stop-color="#1E0000" />
+    </linearGradient>
+    
+    <!-- Blood drip pattern -->
+    <pattern id="blood-drip" x="0" y="0" width="50" height="200" patternUnits="userSpaceOnUse">
+      <path d="M 25,0 L 25,100 Q 40,150 25,200 Q 10,150 25,100 Z" fill="#800000" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Blood drip overlay -->
+  <rect width="1920" height="1080" fill="url(#blood-drip)"/>
+  
+  <!-- Gothic arch at top -->
+  <path d="M360,0 L360,300 Q960,450 1560,300 L1560,0 Z" fill="#121212"/>
+  <path d="M380,0 L380,280 Q960,420 1540,280 L1540,0 Z" fill="#1E0000"/>
+  
+  <!-- Blood moon -->
+  <circle cx="1500" cy="250" r="100" fill="#800000" opacity="0.8"/>
+  
+  <!-- Decorative Gothic windows -->
+  <g transform="translate(760, 600)">
+    <path d="M0,0 L0,200 L80,300 L160,200 L160,0 Z" fill="#121212" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+    <path d="M80,0 L80,250" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+    <path d="M40,100 A40,40 0 0,0 120,100" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  </g>
+  
+  <g transform="translate(960, 600)">
+    <path d="M0,0 L0,200 L80,300 L160,200 L160,0 Z" fill="#121212" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+    <path d="M80,0 L80,250" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+    <path d="M40,100 A40,40 0 0,0 120,100" fill="none" stroke="#D4AF37" stroke-width="2" opacity="0.5"/>
+  </g>
+</svg>

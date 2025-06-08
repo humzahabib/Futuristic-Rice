@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Avatar background -->
+  <defs>
+    <linearGradient id="avatar-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121212" />
+      <stop offset="100%" stop-color="#2E0000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base circle -->
+  <circle cx="100" cy="100" r="90" fill="url(#avatar-bg)" stroke="#D4AF37" stroke-width="3"/>
+  
+  <!-- Stylized vampire head -->
+  <path d="M70,70 Q100,40 130,70 L130,120 Q100,140 70,120 Z" fill="#350000"/>
+  
+  <!-- Vampire fangs -->
+  <path d="M90,120 L90,140" stroke="#FFFFFF" stroke-width="3"/>
+  <path d="M110,120 L110,140" stroke="#FFFFFF" stroke-width="3"/>
+  
+  <!-- Vampire cape -->
+  <path d="M65,110 Q100,150 135,110 Q150,140 165,160 Q100,130 35,160 Q50,140 65,110" fill="#800000"/>
+  
+  <!-- Bat wings (decorative) -->
+  <path d="M100,70 L60,40 Q50,45 60,70" fill="none" stroke="#800000" stroke-width="2"/>
+  <path d="M100,70 L140,40 Q150,45 140,70" fill="none" stroke="#800000" stroke-width="2"/>
+</svg>

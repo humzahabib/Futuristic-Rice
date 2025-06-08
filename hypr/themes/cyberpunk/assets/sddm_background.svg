@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A0A16" />
+      <stop offset="100%" stop-color="#1A1A36" />
+    </linearGradient>
+    
+    <!-- Grid pattern -->
+    <pattern id="grid" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#00F6FF" stroke-width="0.5" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base background -->
+  <rect width="1920" height="1080" fill="url(#bg-gradient)"/>
+  
+  <!-- Grid overlay -->
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  
+  <!-- Cyberpunk city silhouette -->
+  <path d="M0,1080 L0,700 L100,650 L150,700 L200,670 L250,680 L300,650 L350,620 L400,650 L450,600 L500,630 L550,600 L600,620 L650,600 L700,550 L750,580 L800,550 L850,600 L900,580 L950,600 L1000,550 L1050,570 L1100,550 L1150,520 L1200,550 L1250,530 L1300,550 L1350,500 L1400,520 L1450,500 L1500,520 L1550,480 L1600,520 L1650,490 L1700,510 L1750,490 L1800,510 L1850,480 L1900,500 L1920,500 L1920,1080 Z" fill="#060614" opacity="0.7"/>
+  
+  <!-- Horizontal neon lines -->
+  <line x1="0" y1="800" x2="1920" y2="800" stroke="#FF00FF" stroke-width="1" opacity="0.6"/>
+  <line x1="0" y1="820" x2="1920" y2="820" stroke="#00F6FF" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Binary code background -->
+  <text x="100" y="150" font-family="monospace" font-size="10" fill="#00F6FF" opacity="0.2">10110101 01101001 10010101 10101010 01101001 10110101 01101001</text>
+  <text x="100" y="170" font-family="monospace" font-size="10" fill="#00F6FF" opacity="0.2">01011010 10101011 01001010 01010101 10110101 01101001 10010101</text>
+  
+  <text x="1400" y="650" font-family="monospace" font-size="10" fill="#FF00FF" opacity="0.2">10110101 01101001 10010101 10101010 01101001 10110101 01101001</text>
+  <text x="1400" y="670" font-family="monospace" font-size="10" fill="#FF00FF" opacity="0.2">01011010 10101011 01001010 01010101 10110101 01101001 10010101</text>
+</svg>

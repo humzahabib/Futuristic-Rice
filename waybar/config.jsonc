@@ -29,8 +29,7 @@
         "temperature",
         "custom/separator",
         "battery",
-        "custom/separator",
-        "custom/power"
+        "custom/separator"
     ],
     "idle_inhibitor": {
     "format": "{icon}",

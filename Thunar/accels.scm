@@ -32,6 +32,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/zoom-out-alt" "<Primary>KP_Subtract")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-file-menu" "F10")
 ; (gtk_accel_path "<Actions>/ThunarWindow/contents" "F1")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/cca306c1e21b3c8b2dbd6479588786a3" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/show-highlight" "")
 ; (gtk_accel_path "<Actions>/ThunarBookmarks/df1de29b11e2f4617d4060b24448022f" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/sort-descending" "")

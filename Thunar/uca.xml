@@ -1,36 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 <action>
-    <icon>utilities-terminal</icon>
-    <name>Open Terminal Here</name>
-    <unique-id>1640000000000000-1</unique-id>
-    <command>alacritty --working-directory %f</command>
-    <description>Open terminal in current directory</description>
-    <patterns>*</patterns>
-    <startup-notify/>
-    <directories/>
+	<icon>nvim</icon>
+	<name>Open Neovim Here</name>
+	<submenu></submenu>
+	<unique-id>1749556246381251-1</unique-id>
+	<command>nvim %f</command>
+	<description>Opens neovim in the current directory</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
-
 <action>
-    <icon>code</icon>
-    <name>Open in VS Code</name>
-    <unique-id>1640000000000000-2</unique-id>
-    <command>code %f</command>
-    <description>Open file/folder in VS Code</description>
-    <patterns>*</patterns>
-    <startup-notify/>
-    <directories/>
-    <text-files/>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1640000000000000-1</unique-id>
+	<command>kitty --working-directory %f</command>
+	<description>Open terminal in current directory</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
 </action>
-
 <action>
-    <icon>folder-open</icon>
-    <name>Open as Root</name>
-    <unique-id>1640000000000000-3</unique-id>
-    <command>pkexec thunar %f</command>
-    <description>Open directory as root</description>
-    <patterns>*</patterns>
-    <startup-notify/>
-    <directories/>
+	<icon>code</icon>
+	<name>Open in VS Code</name>
+	<submenu></submenu>
+	<unique-id>1640000000000000-2</unique-id>
+	<command>code %f</command>
+	<description>Open file/folder in VS Code</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+	<text-files/>
+</action>
+<action>
+	<icon>folder-open</icon>
+	<name>Open as Root</name>
+	<submenu></submenu>
+	<unique-id>1640000000000000-3</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Open directory as root</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
 </action>
 </actions>

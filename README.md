@@ -2,6 +2,9 @@
 My cyberpunk themed rice for Arch + Hyprland
 
 
+You can remove Conky Config files, it's just a piece of shit software anyways. bTop is way better.
+Neovim configs build upon kickstarter config.
+
 Most of the stuff in this rice is being done through hotkeys. I am listing some of them here, rest you can find in hypr -> hyprland.conf
 
 
